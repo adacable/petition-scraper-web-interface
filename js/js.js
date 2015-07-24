@@ -38,7 +38,7 @@ function handleJson(dataIn){
 function convertDates(dataIn){
     $.each(dataIn, function (i,v){
         v["time"] = new Date(v["time"])
-    }
+    })
     return dataIn
 }
 function createLablesArray(dataSet, atribute){
