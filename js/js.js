@@ -27,8 +27,19 @@ function getData(){
     )
 }
 function handleJson(dataIn){
-    latestData = dataIn
-    reDrawCharts()
+    latestData = convertDates(dataIn);
+    latestData.sort(function (a,b){
+        a = a["time"]
+        b = b["time"]
+        return a>b ? -1 : a<b ? 1 : 0;
+    }
+    reDrawCharts();
+}
+function convertDates(dataIn){
+    $.each(dataIn, function (i,v){
+        v["time"] = new Date(v["time"])
+    }
+    return dataIn
 }
 function createLablesArray(dataSet, atribute){
     return new Array(dataSet.length).join(".").split(".");
