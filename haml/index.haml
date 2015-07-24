@@ -1,0 +1,28 @@
+!!!
+%head
+    %link{:href => "./style.css", :type => "text/css", :rel => "stylesheet"}
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
+    %script{:src => "./chart.js"}
+    %script{:src => "./js.js"}
+    %title
+        Trans petiton stats
+%body
+    .header
+        %h1
+            Statistics on the ongoing gender recogntion petition
+        %a.signit{:href => "https://petition.parliament.uk/petitions/104639"}
+            SIGN IT NOW
+    %section.signatures.graph
+        %h1
+            Signatures
+
+        %canvas#signaturesChart{:width =>"100%",:height => "400"}
+    %section.rate.graph
+        %h1
+            Signatures/minute
+        %canvas#deltaSignaturesChart{:width =>"400",:height => "400"}
+
+    %footer.about
+        Made by <a href="http://twitter.com/drcab1e"> @drcab1e</a> and<a href="https://twitter.com/Lokidottir_"> @Lokidottir_</a>, data available <a href="./data.json"> here</a> updated every minute.
+        Page does not nessicerily update in time with dataset, but is acurate to nearest minuite
+    

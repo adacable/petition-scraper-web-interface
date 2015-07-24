@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <link href='./style.css' rel='stylesheet' type='text/css'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='./chart.js'></script>
+  <script src='./js.js'></script>
+  <title>
+    Trans petiton stats
+  </title>
+</head>
+<body>
+  <div class='header'>
+    <h1>
+      Statistics on the ongoing gender recogntion petition
+    </h1>
+    <a class='signit' href='https://petition.parliament.uk/petitions/104639'>
+      SIGN IT NOW
+    </a>
+  </div>
+  <section class='signatures graph'>
+    <h1>
+      Signatures
+    </h1>
+    <canvas height='400' id='signaturesChart' width='100%'></canvas>
+  </section>
+  <section class='rate graph'>
+    <h1>
+      Signatures/minute
+    </h1>
+    <canvas height='400' id='deltaSignaturesChart' width='400'></canvas>
+  </section>
+  <footer class='about'>
+    Made by <a href="http://twitter.com/drcab1e"> @drcab1e</a> and<a href="https://twitter.com/Lokidottir_"> @Lokidottir_</a>, data available <a href="./data.json"> here</a> updated every minute.
+    Page does not nessicerily update in time with dataset, but is acurate to nearest minuite
+  </footer>
+</body>
