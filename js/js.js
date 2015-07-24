@@ -32,7 +32,7 @@ function handleJson(dataIn){
         a = a["time"]
         b = b["time"]
         return a>b ? -1 : a<b ? 1 : 0;
-    }
+    })
     reDrawCharts();
 }
 function convertDates(dataIn){
